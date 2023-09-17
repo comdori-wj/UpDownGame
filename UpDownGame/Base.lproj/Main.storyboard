@@ -63,6 +63,9 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                     </preferredSymbolConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="i4l-cc-6Tc" kind="presentation" modalTransitionStyle="crossDissolve" id="8GP-1p-wjY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBv-Hg-FLJ">
                                 <rect key="frame" x="386" y="227.66666666666663" width="80.333333333333314" height="57"/>
@@ -128,11 +131,72 @@
             </objects>
             <point key="canvasLocation" x="131.69014084507043" y="-28.244274809160306"/>
         </scene>
+        <!--Credit View Controller-->
+        <scene sceneID="mAS-u6-afZ">
+            <objects>
+                <viewController id="i4l-cc-6Tc" customClass="CreditViewController" customModule="UpDownGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SfV-HL-YPT">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yagom_symbol" translatesAutoresizingMaskIntoConstraints="NO" id="8oo-DO-TrV">
+                                <rect key="frame" x="20" y="96.666666666666686" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="g6D-ky-rNn"/>
+                                    <constraint firstAttribute="height" constant="200" id="toj-Eh-SHQ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="xL8-Q2-cLl"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kl9-31-MmH">
+                                <rect key="frame" x="20" y="20" width="85" height="55"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark.icloud" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                </buttonConfiguration>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="안녕 세상!  나는 야곰!  내 주소: https://google.com" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wHj-7d-byS">
+                                <rect key="frame" x="240" y="20" width="572" height="353"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I7i-sh-pME"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="wHj-7d-byS" secondAttribute="bottom" constant="20" id="2gq-OC-O7y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wHj-7d-byS" secondAttribute="trailing" constant="20" id="Daq-m0-QdR"/>
+                            <constraint firstItem="8oo-DO-TrV" firstAttribute="top" secondItem="kl9-31-MmH" secondAttribute="bottom" constant="21.666666666666686" id="IwS-5m-FWx"/>
+                            <constraint firstItem="8oo-DO-TrV" firstAttribute="leading" secondItem="kl9-31-MmH" secondAttribute="leading" id="PQO-KZ-v30"/>
+                            <constraint firstItem="8oo-DO-TrV" firstAttribute="centerY" secondItem="SfV-HL-YPT" secondAttribute="centerY" id="RsM-3w-sEz"/>
+                            <constraint firstItem="kl9-31-MmH" firstAttribute="leading" secondItem="I7i-sh-pME" secondAttribute="leading" constant="20" id="Xhh-Me-C6o"/>
+                            <constraint firstItem="wHj-7d-byS" firstAttribute="top" secondItem="I7i-sh-pME" secondAttribute="top" constant="20" id="nO2-d0-5Or"/>
+                            <constraint firstItem="kl9-31-MmH" firstAttribute="top" secondItem="I7i-sh-pME" secondAttribute="top" constant="20" id="spK-zj-2dh"/>
+                            <constraint firstItem="wHj-7d-byS" firstAttribute="leading" secondItem="8oo-DO-TrV" secondAttribute="trailing" constant="20" id="wU9-PE-FAU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Wz-Dx-UYl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788.0281690140846" y="-28.244274809160306"/>
+        </scene>
     </scenes>
     <resources>
         <image name="checkmark.seal.fill" catalog="system" width="128" height="124"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="memories" catalog="system" width="128" height="112"/>
+        <image name="xmark.icloud" catalog="system" width="128" height="90"/>
+        <image name="yagom_symbol" width="166.66667175292969" height="160.33332824707031"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
