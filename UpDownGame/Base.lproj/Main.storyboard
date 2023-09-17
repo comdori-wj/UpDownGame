@@ -155,6 +155,9 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                     </preferredSymbolConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpDismissButton:" destination="i4l-cc-6Tc" eventType="touchUpInside" id="zWW-fa-yzO"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="안녕 세상!  나는 야곰!  내 주소: https://google.com" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wHj-7d-byS">
                                 <rect key="frame" x="240" y="20" width="572" height="353"/>
