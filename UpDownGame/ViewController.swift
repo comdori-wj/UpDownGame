@@ -42,6 +42,18 @@ class ViewController: UIViewController { // 클래스 안에 들어있는 함수
         
         if randomValue == hitValue {
             print("YOU HIT!!")
+            reset()
+            return
+        } else if tryCount >= 5 {
+            print("You lose...")
+            reset()
+            return
+        } else if randomValue > hitValue {
+            slider.minimumValue = Float(hitValue)
+            minimumValueLabel.text = String(hitValue)
+        } else {
+            slider.maximumValue = Float(hitValue)
+            maximumValueLable.text = String(hitValue)
         }
     }
     
